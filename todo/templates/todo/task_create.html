@@ -1,0 +1,17 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+<div>
+    <h1>New post</h1>
+    <form method="POST" class="post-form"> {% csrf_token %}  
+        {{form.as_p}}
+
+        <button type="submit" class="save btn btn-dark">Save</button>
+    </form>
+    
+</div>
+
+
+
+{% endblock %}
